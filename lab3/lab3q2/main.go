@@ -20,34 +20,26 @@ func updateStudent(s1 *Student) {
 
 func main() {
 
-	// Pointer manipulation
 	marks := 75
 	p := &marks
 
-	// Default values
 	fmt.Println("Default Marks:", marks)
 	fmt.Println("Address of Marks:", &marks)
 	fmt.Println("Value using pointer:", *p)
 
-	// Function call
 	updateMarks(&marks)
 
-	// Updated marks
 	fmt.Println("Marks after function call:", marks)
 
-	// Create structure using new()
 	student := new(Student)
 
-	// Default student values
 	fmt.Println("\nDefault Student Values:")
 	fmt.Println("Name:", student.Name)
 	fmt.Println("Age:", student.Age)
 	fmt.Println("Marks:", student.Marks)
 
-	// Function call
 	updateStudent(student)
 
-	// Updated student values
 	fmt.Println("\nUpdated Student Values:")
 	fmt.Println("Name:", student.Name)
 	fmt.Println("Age:", student.Age)
