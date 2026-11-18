@@ -1,0 +1,5 @@
+**/bin/
+**/obj/
+.clj-kondo/
+.lsp/
+*.db
