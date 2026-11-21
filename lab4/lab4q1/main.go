@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func calculateSquares(ch chan string) {
 	fmt.Println("Square Goroutine started")
@@ -47,8 +45,7 @@ func main() {
 	go calculateFibonacci(ch)
 
 	for i := 0; i < 15; i++ {
-		result := <-ch
-		fmt.Println(result)
+		fmt.Println(<-ch)
 	}
 
 	fmt.Println("Main function completed")

@@ -1,71 +1,54 @@
 package main
 
-import (
-	"testing"
-)
+import "testing"
 
-// Test valid division
-func TestDivideValid(t *testing.T) {
+func TestDivide(t *testing.T) {
 	result, err := Divide(10, 2)
-
 	if err != nil {
-		t.Errorf("Unexpected error: %v", err)
+		t.Errorf("unexpected error: %v", err)
 	}
-
 	if result != 5 {
-		t.Errorf("Expected 5, got %v", result)
+		t.Errorf("expected 5, got %f", result)
 	}
 }
 
-// Test division by zero
 func TestDivideByZero(t *testing.T) {
 	_, err := Divide(10, 0)
-
 	if err == nil {
-		t.Error("Expected division by zero error")
+		t.Error("expected division by zero error")
 	}
 }
 
-// Test valid square root
-func TestSquareRootValid(t *testing.T) {
+func TestSquareRoot(t *testing.T) {
 	result, err := SquareRoot(25)
-
 	if err != nil {
-		t.Errorf("Unexpected error: %v", err)
+		t.Errorf("unexpected error: %v", err)
 	}
-
 	if result != 5 {
-		t.Errorf("Expected 5, got %v", result)
+		t.Errorf("expected 5, got %f", result)
 	}
 }
 
-// Test negative square root
-func TestSquareRootNegative(t *testing.T) {
+func TestNegativeSquareRoot(t *testing.T) {
 	_, err := SquareRoot(-9)
-
 	if err == nil {
-		t.Error("Expected negative square root error")
+		t.Error("expected negative square root error")
 	}
 }
 
-// Test valid input
-func TestValidateInputValid(t *testing.T) {
+func TestValidateInput(t *testing.T) {
 	result, err := ValidateInput("Hello Go")
-
 	if err != nil {
-		t.Errorf("Unexpected error: %v", err)
+		t.Errorf("unexpected error: %v", err)
 	}
-
 	if result != "Hello Go" {
-		t.Errorf("Expected Hello Go, got %v", result)
+		t.Errorf("expected Hello Go, got %s", result)
 	}
 }
 
-// Test empty input
-func TestValidateInputEmpty(t *testing.T) {
+func TestEmptyInput(t *testing.T) {
 	_, err := ValidateInput("")
-
 	if err == nil {
-		t.Error("Expected empty input error")
+		t.Error("expected empty input error")
 	}
 }
